@@ -1,0 +1,37 @@
+package Oops;
+
+class Student {
+
+	int id;
+	String firstName;
+	String lastName;
+	double fees;
+
+	Student(int id, String firstName, String lastName, double fees) {
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.fees = fees;
+	}
+
+	String getName() {
+		return firstName + " " + lastName;
+	}
+
+	double getFees() {
+		return fees;
+	}
+}
+
+public class Studentdetails {
+	public static void main(String[] args) {
+
+		Student s1 = new Student(101, "sukit", "mc", 34000.50);
+		Student s2 = new Student(202, "Mary", "das", 68000.00);
+		Student s3 = new Student(303, "alexander", "Walker", 99500.45);
+
+		System.out.println("Student 1: " + s1.id + ", " + s1.getName() + ", Fees: " + s1.getFees());
+		System.out.println("Student 2: " + s2.id + ", " + s2.getName() + ", Fees: " + s2.getFees());
+		System.out.println("Student 3: " + s3.id + ", " + s3.getName() + ", Fees: " + s3.getFees());
+	}
+}
